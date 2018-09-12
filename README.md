@@ -61,4 +61,5 @@ oc delete all --all
 ## Additional References
 
 [Spring Boot Runtime Guide](https://access.redhat.com/documentation/en-us/red_hat_openshift_application_runtimes/1/html-single/spring_boot_runtime_guide/)
+
 [Snowdrop](http://snowdrop.me/)
