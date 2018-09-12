@@ -1,10 +1,10 @@
-# helloworld-rhoar
+# Helloworld-rhoar
 
-This simple HelloWorld Application using Spring Boot from Red Hat Openshift Application Runtimes can be used to explore both fabric8 maven plugin and Openshift CLI deployment strategies
+This simple HelloWorld Application using [Spring Boot](http://spring.io/projects/spring-boot) from Red Hat [Openshift Application Runtimes]() can be used to explore both [Fabric8 maven plugin](https://maven.fabric8.io/) and [Openshift Command Line Interface](https://docs.openshift.com/container-platform/3.10/cli_reference/index.html) deployment strategies
 
 ## Pre Requisites
 
-A running instance of Openshift. This example was originally built using Container Development Kit (a.k.a Minishift):
+A running instance of Openshift. This example was originally built using Container [Development Kit (a.k.a Minishift)](https://developers.redhat.com/products/cdk/overview/):
 
 ```
 minishift version
@@ -59,3 +59,6 @@ oc delete all --all
 ```
 
 ## Additional References
+
+[Spring Boot Runtime Guide](https://access.redhat.com/documentation/en-us/red_hat_openshift_application_runtimes/1/html-single/spring_boot_runtime_guide/)
+[Snowdrop](http://snowdrop.me/)
