@@ -40,7 +40,7 @@ mvn spring-boot:run
 mvn clean fabric8:deploy -Popenshift
 ```
 
-In order to cleanup this project and explore command-line deployment strategy, just execute:
+..* In order to cleanup this project and explore command-line deployment strategy, just execute:
 
 ```
 oc delete all --all
@@ -52,7 +52,7 @@ oc delete all --all
 oc new-app java:8~https://github.com/vinicius-martinez/helloworld-rhoar.git
 ```
 
-In order to cleanup this project and explore fabric8 deployment strategy, just execute:
+..* In order to cleanup this project and explore fabric8 deployment strategy, just execute:
 
 ```
 oc delete all --all
