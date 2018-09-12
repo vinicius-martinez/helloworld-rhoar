@@ -60,7 +60,7 @@
       </plugin>
     </plugins>
   </build>
-  <!-- Specify the repositories containing RHOAR artifacts -->
+
   <repositories>
     <repository>
       <id>redhat-ga</id>
@@ -77,7 +77,6 @@
     </pluginRepository>
   </pluginRepositories>
 
-  <!--
   <profiles>
     <profile>
       <id>openshift</id>
@@ -86,9 +85,9 @@
           <plugin>
             <groupId>io.fabric8</groupId>
             <artifactId>fabric8-maven-plugin</artifactId>
+            <version>3.5.38</version>
             <executions>
               <execution>
-                <id>fmp</id>
                 <goals>
                   <goal>resource</goal>
                   <goal>build</goal>
@@ -100,5 +99,5 @@
       </build>
     </profile>
   </profiles>
--->
+
 </project>
