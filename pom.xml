@@ -10,8 +10,11 @@
   <description>Red Hat Openshift Application Runtimes Hello World Sample</description>
 
   <properties>
+    <spring-boot-bom.version>1.5.15.Final-redhat-00002</spring-boot-bom.version>
+    <spring-boot.version>1.5.15.RELEASE</spring-boot.version>
+    <openjdk18-openshift.version>1.3</openjdk18-openshift.version>
+    <fabric8.generator.from>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:${openjdk18-openshift.version}</fabric8.generator.from>
     <fabric8.generator.fromMode>istag</fabric8.generator.fromMode>
-    <fabric8.generator.from>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:1.2</fabric8.generator.from>
   </properties>
 
   <dependencyManagement>
@@ -19,7 +22,7 @@
       <dependency>
         <groupId>me.snowdrop</groupId>
         <artifactId>spring-boot-bom</artifactId>
-        <version>1.5.15.Final-redhat-00002</version>
+        <version>${spring-boot-bom.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -38,6 +41,15 @@
 
   <build>
     <finalName>${project.artifactId}</finalName>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${spring-boot.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -80,6 +92,7 @@
             <version>3.5.38</version>
             <executions>
               <execution>
+                <id>fmp</id>
                 <goals>
                   <goal>resource</goal>
                   <goal>build</goal>
